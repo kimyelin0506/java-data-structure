@@ -1,4 +1,4 @@
-package me.kimyelin.Recurrence;
+package me.kimyelin.Math.Recurrence;
 
 import static me.kimyelin.Main.line;
 

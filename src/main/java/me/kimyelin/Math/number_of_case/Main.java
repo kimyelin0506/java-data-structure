@@ -1,4 +1,4 @@
-package me.kimyelin.number_of_case;
+package me.kimyelin.Math.number_of_case;
 
 import java.util.ArrayList;
 import java.util.Arrays;

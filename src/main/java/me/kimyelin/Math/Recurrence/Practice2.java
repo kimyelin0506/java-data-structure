@@ -1,4 +1,4 @@
-package me.kimyelin.Recurrence;
+package me.kimyelin.Math.Recurrence;
 //최대 공약수를 재귀함수로 구현하기
 public class Practice2 {
     static int gcd(int a, int b){

@@ -1,4 +1,4 @@
-package me.kimyelin.Combination;
+package me.kimyelin.Math.combination;
 
 import static me.kimyelin.Main.line;
 

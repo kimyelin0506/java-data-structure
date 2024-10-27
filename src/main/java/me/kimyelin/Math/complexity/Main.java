@@ -1,4 +1,4 @@
-package me.kimyelin.complexity;
+package me.kimyelin.Math.complexity;
 
 
 import static me.kimyelin.Main.line;

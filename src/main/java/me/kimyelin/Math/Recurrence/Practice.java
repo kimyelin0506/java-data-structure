@@ -1,4 +1,4 @@
-package me.kimyelin.Recurrence;
+package me.kimyelin.Math.Recurrence;
 //factorial을 재귀함수로 구현하기
 public class Practice {
 

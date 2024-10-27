@@ -1,4 +1,4 @@
-package me.kimyelin.permutation;
+package me.kimyelin.Math.permutation;
 
 import java.util.stream.IntStream;
 

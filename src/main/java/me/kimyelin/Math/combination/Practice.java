@@ -1,4 +1,4 @@
-package me.kimyelin.Combination;
+package me.kimyelin.Math.combination;
 
 import java.util.stream.IntStream;
 /*1,2,3,4를 이용하여 세자리 자연수를 만드는 방법(순서X,중복X)의 각 결과 출력하기

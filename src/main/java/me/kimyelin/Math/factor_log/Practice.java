@@ -1,4 +1,4 @@
-package me.kimyelin.factor_log;
+package me.kimyelin.Math.factor_log;
 
 import static me.kimyelin.Main.line;
 

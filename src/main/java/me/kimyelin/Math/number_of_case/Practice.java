@@ -1,4 +1,4 @@
-package me.kimyelin.number_of_case;
+package me.kimyelin.Math.number_of_case;
 /* 약수 구하기, 두 수의 최대 공약수와 최소 공배수 구하기
     활용) 1~10의 수 중 A의 약수 또는 B의 약수인 경우의 수
     활용) 1~10의 수 중 A의 약수이면서 B의 약수인 경우
