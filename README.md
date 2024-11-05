@@ -343,3 +343,52 @@
             [2] RR(Right Right): 회전 1회, (오른쪽 노드)를 왼쪽 방향으로 회전
             [3] LR(Left Right): 회전 2회, RR회전 다음 LL회전
             [4] RL(Right Left): 회전 2회, LL회전 다음 RR회전
+### 자료구조-10주차
+    1. practice: Red-Black Tree
+        (1) Red-Black Tree
+            -조건
+                -root 노드와 leaf노드의 색: Black
+                -Red색 노드의 자식은 Black(double Black은 불가)
+                -모든 leaf 노드에서 root노드까지 가는 경로의 Black 노드 수 같음
+            -조건이 깨지는 상황: ReBalancing
+        (2) 삽입
+            (case1) 노드 삽입 후 double red 발생 1: 부모 노드의 형제노드가 red인 경우
+                -ReColoring 진행
+                    [1] 삽입한 노드의 부모와 부모 형제 노드를 black으로 변경
+                    [2] 부모의 부모 노드를 red로 변경
+                    [3] 부모의 부모 노드가 root인지 double red인지에 따라 조건 진행
+            (case2) 노드 삽입 후 double red 발생 2: 부모 노드의 형제 노드가 black or Null
+                -ReStructuring 진행
+                    [1] 조정 대상: 삽입한 노드(cur), 부모 노드(p), 부모의 부모 노드(p.p)
+                    [2] 조정 대상 노드들을 오름차순 정렬
+                    [3] 가운데 노드를 부모 노드(p)로 선정, black 변경
+                    [4] 나머지 두 노드들을 자식노드로 선정, red 변경
+        (3) 삭제
+            (default) 삭제 대상 노드: black, 그 자리에 오는 노드: red
+                -해당 자리로 오는 red -> black 변경
+            (case1: 이중 흑색1) 삭제 대상 노드: black, 그 자리에 오는 노드: black
+                -이중 흑색 노드의 형제 노드: black, 형제 노드의 양쪽 노드: black인 경우
+                    [1] 형제 노드: red 변경
+                    [2] 이중 흑색 노드의 검은색 1개를 부모 노드에 전달
+                    [3] 부모 노드가 root가 아닌 이중 흑백 노드가 되면 (case) 반복
+            (case2: 이중 흑색2) 이중 흑색 노드의 형제 노드가 red인 경우
+                [1] 형제 노드: black 변경
+                [2] 부모 노드: red 변경
+                [3] 부모 노드 기준으로 왼쪽으로 회전
+                [4] 그 다음 (case)에 따라 진행
+            (case3-1: 이중 흑색3-1) 이중 흑색 노드의 형제 노드: black, 오른쪽 자식: red
+                [1] 부모 노드, 형제 노드의 오른쪽 자식 노드: black
+                [2] 부모 노드를 기준으로 오른쪽으로 회전
+            (case3-2: 이중 흑색3-2) 이중 흑색 노드의 형제 노드: black, 왼쪽 자식: red
+                [1] 형제 노드: red
+                [2] 형제 노드의 왼쪽 자식 노드: black
+                [3] 형제 노드 기준으로 오른쪽 회전
+                [4] (case3-1)진행
+        (4) Red-Black Tree Vs AVL Tree
+            -알고리즘 시간 복잡도: 둘 다 O(logN)
+            -균형 수준
+                -엄격도: AVL Tree
+                -Red-Black Tree: 색으로 구분하는 경우로 인한 회전수 감소
+            -실 사용시
+                -AVL: Tree 체계 잡힌 후, 탐색 많은 경우
+                -Red-Black: 삽입/삭제 빈번한 경우
