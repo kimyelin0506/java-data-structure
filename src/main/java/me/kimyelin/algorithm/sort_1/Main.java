@@ -1,4 +1,4 @@
-package me.kimyelin.algorithm.sort;
+package me.kimyelin.algorithm.sort_1;
 
 import java.util.Arrays;
 
